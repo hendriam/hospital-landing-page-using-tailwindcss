@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <link rel="stylesheet" href="../dist/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="max-h-screen font-poppins antialiased">
+    <header class="flex flex-col max-w-5xl lg:mx-auto mx-10 sm:mt-9 mt-2">
+        <div class="flex justify-between items-center">
+            <a href="" class="font-bold text-lg"><span class="text-[#0099FF]">Hos</span><span
+                    class="text-black">pital</span>.</a>
+            <button type="button"
+                class="sm:hidden inline-flex items-center justify-center rounded-md p-2  hover:bg-[#0099FF] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-expanded="false" onclick="funcShowHide()">
+                <svg class="block h-6 w-6" id="btnOpen" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            <nav class="hidden sm:block">
+                <ul class="text-sm flex space-x-9">
+                    <li class="hover:underline"><a href="" class="">Home</a></li>
+                    <li class="hover:underline"><a href="">Service</a></li>
+                    <li hover:underline><a href="">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bg-[#0099FF] rounded-md hidden" id="mobileMenu">
+            <div class="px-2 pt-2 pb-3 text-sm">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href=""
+                    class="block text-white hover:bg-white hover:text-black p-2 font-semibold rounded-md">Home</a>
+                <a href=""
+                    class="block text-white hover:bg-white hover:text-black p-2 font-semibold rounded-md">Service</a>
+                <a href=""
+                    class="block text-white hover:bg-white hover:text-black p-2 font-semibold rounded-md">About</a>
+            </div>
+        </div>
+    </header>
+
+    <section
+        class="flex flex-col sm:flex-row max-w-5xl lg:mx-auto mx-10 mt-10 sm:mb-32 mb-10 justify-around items-center">
+
+        <!-- <div class="p-40 absolute left-56 -top-12">
+            <div class="w-0 h-0 
+            border-t-[50px] border-t-transparent
+            border-l-[60px] border-l-[#31adff] opacity-10  
+            "></div>
+        </div>
+
+        <div class="p-40 absolute left-5 top-8">
+            <div class="w-0 h-0 
+            border-l-[20px] border-l-transparent
+            border-t-[50px] border-t-[#31adff] opacity-10  
+            border-r-[20px] border-r-transparent
+            "></div>
+        </div> -->
+        <div class="flex flex-col">
+            <h1
+                class="text-3xl md:text-5xl font-extrabold capitalize text-center sm:text-start tracking-wide leading-8 text-[#333333]">
+                we care
+                about <br> your
+                health
+            </h1>
+            <p class=" text-gray-500 py-3 text-sm text-center sm:text-start tracking-wide leading-6">Check
+                now your healty
+                with our
+                profesional
+                doctor, <br>
+                completed and modern
+                fasilities
+                services</p>
+            <button type="button"
+                class="bg-[#0099FF]  hover:bg-[#31adff] hover:ring-2 hover:ring-[#75c4f9] text-white py-2 px-10 mt-2 mx-auto sm:mx-0 font-medium max-w-fit rounded-md shadow-md">Check
+                Now</button>
+        </div>
+        <img src="images/Hero.png" class="max-w-xs sm:max-w-xs md:max-w-sm xl:max-w-md mt-3 sm:mt-0" alt="Hero">
+    </section>
+
+    <section class="flex flex-col bg-[#D7F1F6] bg-opacity-25 py-20 px-5">
+        <h5 class="text-base text-center font-bold capitalize mb-5 text-[#333333]">
+            our services
+        </h5>
+        <h2 class="text-center sm:text-3xl text-2xl font-semibold text-[#333333] capitalize">
+            3 step easy we care your <br> health
+        </h2>
+
+        <div class="flex flex-col items-center justify-center sm:flex-row mt-16 sm:space-x-3 sm:space-y-0 space-y-12">
+            <div class="w-48 relative bg-white rounded-md shadow-md text-[#333333]" key={icon.title}>
+                <img src="images/icon-date.png" alt="date" class="w-20 absolute left-16 -top-9">
+                <p class="text-center text-md mt-14 mb-5 font-bold">
+                    Date
+                </p>
+                <p class="text-sm text-center mx-3 mb-10 leading-4 text-gray-500 capitalize">
+                    choose what date to check.
+                </p>
+            </div>
+
+            <div class="w-48 relative bg-white rounded-md shadow-md text-[#333333]" key={icon.title}>
+                <img src="images/icon-healthcare.png" alt="date" class="w-20 absolute left-16 -top-9">
+                <p class="text-center text-md mt-14 mb-5 font-bold">
+                    Poly
+                </p>
+                <p class="text-sm text-center mx-3 mb-10 leading-4 text-gray-500 capitalize">
+                    choose what poly to check.
+                </p>
+            </div>
+
+            <div class="w-48 relative bg-white rounded-md shadow-md text-[#333333]" key={icon.title}>
+                <img src="images/icon-doctor.png" alt="date" class="w-20 absolute left-16 -top-9">
+                <p class="text-center text-md mt-14 mb-5 font-bold">
+                    Date
+                </p>
+                <p class="text-sm text-center mx-3 mb-10 leading-4 text-gray-500 capitalize">
+                    choose what doctor to check.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="max-w-5xl sm:mx-auto mx-10 flex sm:flex-row flex-col items-center justify-center sm:space-y-0 space-y-16 lg:space-x-10 space-x-0 py-20">
+        <img src="images/AboutUs.png" alt="About image" class="max-w-xs md:max-w-sm mx-5" />
+        <div class="text-center sm:text-start">
+            <h5 class="text-base font-bold capitalize mb-5 mx-5 text-[#333333]">
+                about us
+            </h5>
+            <h2 class="sm:text-3xl text-2xl font-semibold text-[#333333] mb-5 mx-5 capitalize">
+                we help your health
+            </h2>
+            <p class="text-sm mb-10 mx-5 leading-6 text-gray-500">
+                This profile describes the activities of health services
+                and medical support as well as the facilities and
+                conditions of the General Hospital which is reflected in
+                the general public served from all groups, religions and
+                beliefs, ethnicity and the level and frequency of bed
+                occupancy which continues to increase significantly.
+            </p>
+        </div>
+    </section>
+
+    <section class="flex flex-col bg-[#D7F1F6] bg-opacity-25 pt-20 px-5">
+        <h5 class="text-base text-center font-bold capitalize mb-5 text-[#333333]">
+            our Doctors
+        </h5>
+        <h2 class="text-center sm:text-3xl text-2xl font-semibold text-[#333333] capitalize">
+            Visit our professional <br> specialists
+        </h2>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-2 mt-10">
+            <div class="w-60 -mb-10 sm:mb-0">
+                <img src="images/doctor1.png" alt="doctor2" loading="lazy" class="shadow-xl">
+                <div class="grid grid-rows-2 bg-white w-52 h-24 mx-auto p-3 -top-14 relative rounded-md shadow-md">
+                    <div class="flex space-x-2">
+                        <img src="images/facebook.png" alt="facebook" class="w-4 h-4">
+                        <img src="images/pinterest.png" alt="facebook" class="w-4 h-4">
+                        <img src="images/dribbble.png" alt="facebook" class="w-4 h-4">
+                        <img src="images/instagram.png" alt="facebook" class="w-4 h-4">
+                    </div>
+                    <p class="text-sm font-semibold text-[#333333] -mt-1">Antonius jansen</p>
+                    <p class="text-xs text-gray-500">dentist</p>
+                </div>
+            </div>
+
+            <div class="w-60">
+                <img src="images/doctor2.png" alt="doctor2" loading="lazy" class="shadow-xl">
+                <div class="grid grid-rows-2 bg-white w-52 h-24 mx-auto p-3 -top-14 relative rounded-md shadow-md">
+                    <div class="flex space-x-2">
+                        <img src="images/facebook.png" alt="facebook" class="w-4 h-4">
+                        <img src="images/pinterest.png" alt="facebook" class="w-4 h-4">
+                        <img src="images/dribbble.png" alt="facebook" class="w-4 h-4">
+                        <img src="images/instagram.png" alt="facebook" class="w-4 h-4">
+                    </div>
+                    <p class="text-sm font-semibold text-[#333333] -mt-1">Antonius jansen</p>
+                    <p class="text-xs text-gray-500">dentist</p>
+                </div>
+            </div>
+
+            <div class="w-60 hidden lg:block">
+                <img src="images/doctor3.png" alt="doctor2" loading="lazy" class="shadow-xl">
+                <div class="grid grid-rows-2 bg-white w-52 h-24 mx-auto p-3 -top-14 relative rounded-md shadow-md">
+                    <div class="flex space-x-2">
+                        <img src="images/facebook.png" alt="facebook" class="w-4 h-4">
+                        <img src="images/pinterest.png" alt="facebook" class="w-4 h-4">
+                        <img src="images/dribbble.png" alt="facebook" class="w-4 h-4">
+                        <img src="images/instagram.png" alt="facebook" class="w-4 h-4">
+                    </div>
+                    <p class="text-sm font-semibold text-[#333333] -mt-1">Antonius jansen</p>
+                    <p class="text-xs text-gray-500">dentist</p>
+                </div>
+            </div>
+
+            <div class="w-60 hidden lg:block">
+                <img src="images/doctor4.png" alt="doctor2" loading="lazy" class="shadow-xl">
+                <div class="grid grid-rows-2 bg-white w-52 h-24 mx-auto p-3 -top-14 relative rounded-md shadow-md">
+                    <div class="flex space-x-2">
+                        <img src="images/facebook.png" alt="facebook" class="w-4 h-4">
+                        <img src="images/pinterest.png" alt="facebook" class="w-4 h-4">
+                        <img src="images/dribbble.png" alt="facebook" class="w-4 h-4">
+                        <img src="images/instagram.png" alt="facebook" class="w-4 h-4">
+                    </div>
+                    <p class="text-sm font-semibold text-[#333333] -mt-1">Antonius jansen</p>
+                    <p class="text-xs text-gray-500">dentist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-5xl lg:mx-auto mx-10 pt-20 flex flex-col">
+        <div class="">
+            <h5 class="text-base font-bold capitalize mb-5 text-[#333333]">
+                Testimonials
+            </h5>
+            <h2 class="sm:text-3xl text-2xl font-semibold text-[#333333] mb-5 capitalize">
+                what they say after visiting <br> our hospital
+            </h2>
+            <div class="grid sm:grid-cols-2 gap-4 mt-10">
+                <div class="shadow-lg rounded-md col-span-2 sm:col-span-1">
+                    <img src="images/testimoni1.png" alt="" class="mb-4 rounded-t-md">
+                    <p class="text-sm font-semibold text-[#333333] px-5">John Doe</p>
+                    <p class="text-xs text-gray-500 py-3 pl-5 pr-20 leading-5">The service I felt was very good, the
+                        staff
+                        and doctors
+                        were
+                        friendly
+                        and provided very clear
+                        information.</p>
+                    <img src="images/Stars.png" alt="" class="w-20 mx-auto mt-3 mb-7">
+                </div>
+
+                <div class="shadow-lg rounded-md col-span-2 sm:col-span-1">
+                    <img src="images/testimoni2.png" alt="" class="mb-4 rounded-t-md">
+                    <p class="text-sm font-semibold text-[#333333] px-5">John Doe</p>
+                    <p class="text-xs text-gray-500 py-3 pl-5 pr-20 leading-5">The service I felt was very good, the
+                        staff
+                        and doctors
+                        were
+                        friendly
+                        and provided very clear
+                        information.</p>
+                    <img src="images/Stars.png" alt="" class="w-20 mx-auto mt-3 mb-7">
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#333333] mt-20 sm:p-14 p-5 grid grid-cols-2 grid-rows-1 sm:grid-rows-1">
+            <div class="col-span-2 sm:col-span-1">
+                <h2
+                    class="sm:text-3xl text-2xl sm:text-start text-center font-semibold text-white mb-5 capitalize tracking-wide">
+                    what they say after visiting <br> our hospital
+                </h2>
+                <h5 class="text-xs sm:text-start text-center capitalize mt-10 font-thin text-white tracking-widest">
+                    we will provide the best service.
+                </h5>
+            </div>
+            <div class="col-span-2 sm:col-span-1 sm:place-self-end place-self-center mt-10">
+                <button type="button"
+                    class="bg-[#0099FF] hover:bg-[#31adff] hover:ring-2 hover:ring-[#75c4f9] text-white py-2 px-10 font-medium rounded-md shadow-md">Contact
+                    Us</button>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#D7F1F6] bg-opacity-25 md:px-16 px-10 pt-16 pb-10">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-flow-row grid-cols-5 grid-rows-2 md:grid-rows-none gap-8">
+                <div class="col-span-5 md:col-span-2">
+                    <a href="" class="font-bold text-md"><span class="text-[#0099FF]">Hos</span><span
+                            class="text-black ">pital</span>.</a>
+                    <p class="text-xs text-gray-500 leading-5 mt-5">Our hospital tries to answer the challenges in the
+                        community's need
+                        for quality
+                        dental
+                        health services but still affordable by a wide audience.
+                    </p>
+                    <img src="images/icon-all.png" alt="" class="w-40 mt-5">
+                </div>
+                <div class="row-start-2 col-start-1 md:row-start-1 md:col-start-3">
+                    <h5 class="text-sm font-bold capitalize text-[#333333]">
+                        Menus
+                    </h5>
+                    <div class="flex flex-col space-y-5 mt-5">
+
+                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                        <a href="" class="text-xs text-black hover:underline">Home</a>
+                        <a href="" class="text-xs text-black hover:underline">Service</a>
+                        <a href="" class="text-xs text-black hover:underline">About</a>
+                    </div>
+                </div>
+                <div class="col-span-4 md:col-span-2">
+                    <h5 class="text-sm font-bold capitalize text-[#333333]">
+                        Get Medical Checkup Voucher
+                    </h5>
+
+                    <input
+                        class="bg-[#3c3c3c] focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-5 ring-1 ring-slate-200 shadow-sm mt-5"
+                        type="text" aria-label="Filter projects" placeholder="Enter your email ...">
+
+                    <button type="button"
+                        class="bg-[#0099FF] hover:bg-[#31adff] hover:ring-2 hover:ring-[#75c4f9] text-white py-2 px-10 font-medium text-sm rounded-md shadow-md mt-3">Subscribe</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function funcShowHide() {
+            var x = document.getElementById("mobileMenu");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+
+            var btnOpen = document.getElementById("btnOpen");
+            if (btnOpen.style.display === "block") {
+                btnOpen.style.display = "none";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
